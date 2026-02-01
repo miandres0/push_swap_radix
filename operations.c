@@ -6,7 +6,7 @@
 /*   By: miandres <miandres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 13:39:19 by miandres          #+#    #+#             */
-/*   Updated: 2026/01/31 14:23:52 by miandres         ###   ########.fr       */
+/*   Updated: 2026/01/31 21:29:19 by miandres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 void    push(t_num **stack_1, t_num **stack_2)
 {
 	t_num	*tmp;
-
-	// if (!stack_1 || !stack_2)
 
 	tmp = *stack_1;
 	*stack_1 = tmp->next;
@@ -41,7 +39,6 @@ void	ra(t_num **a)
 	t_num	*old_first;
 	t_num	*old_last;
 	
-	//if
 	old_first = *a;
 	*a = old_first->next;
 	old_first->next = NULL;
@@ -50,5 +47,6 @@ void	ra(t_num **a)
 	{
 		old_last = old_last->next;
 	}
-	old_last->next = old_first;;
+	old_last->next = old_first;
+	write(1, "ra\n", 3);
 }

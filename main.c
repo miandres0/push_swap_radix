@@ -6,28 +6,54 @@
 /*   By: miandres <miandres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 13:01:15 by miandres          #+#    #+#             */
-/*   Updated: 2026/01/31 14:49:24 by miandres         ###   ########.fr       */
+/*   Updated: 2026/01/31 21:22:59 by miandres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	find_rank(int *array, int size, int i)
+int	check_duplicates(t_num *stack)
 {
-	int	j;
-	int	rank;
+	t_num	*i;
+	t_num	*j;
 
-	rank = 0;
-	j = 0;
-	while (j < size)
+	i = stack;
+	while(i)
 	{
-		if (array[j] < array[i])
-			rank++;
-		j++;
+		j = i->next;
+		while(j)
+		{
+			if (i->number == j->number)
+				return (0);
+			j = j->next;
+		}
+		i = i->next;
 	}
-	return (rank);
+	return (1);
 }
-t_num	*create_stack_a(int *array, int size)
+
+void	rank_list_values(t_num *stack)
+{
+	int		rank;
+	t_num	*i;
+	t_num	*j;
+
+	i = stack;
+	while (i)
+	{
+		rank = 0;
+		j = stack;
+		while (j)
+		{
+			if (j->number < i->number)
+				rank++;
+			j = j->next;
+		}
+		i->rank = rank;
+		i = i->next;
+	}
+}
+/* t_num	*create_stack_a(int *array, int size)
 {
 	int		i;
 	int		rank;
@@ -42,24 +68,25 @@ t_num	*create_stack_a(int *array, int size)
 		i++;
 	}
 	return(lst);
-}
-
+} */
 
 int main(int argc, char **argv)
 {
-	// int		*array;
-	// int		size;
-	int		array[] = {1, 3, 2, 8, 4, 7, 5, 6};
-	int		size = 8;
 	t_num	*stack_a;
 	t_num	*stack_b;
-	
-	// array = 
-	// if (check_argv)
-	// 	return (1); // erro, print sla oq
-	// size = create_array(argc, argv, &array);
+	int		size;
+
+	if (argc < 2)
+		return (0);
+	stack_a = parse_args(argc, argv);
+	if (!stack_a || !check_duplicates(stack_a))
+	{
+		write(2, "Error\n", 6);
+		return(1);
+	}
+	rank_list_values(stack_a);
 	stack_b = NULL;
-	stack_a = create_stack_a(array, size);
+	size = ft_lstsize(stack_a);
 	radix_sort(&stack_a, &stack_b, size);
 	return (0);
 }

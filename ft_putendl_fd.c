@@ -1,38 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parse.c                                            :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: miandres <miandres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/31 13:23:28 by miandres          #+#    #+#             */
-/*   Updated: 2026/01/31 14:24:00 by miandres         ###   ########.fr       */
+/*   Created: 2025/07/30 16:39:58 by miandres          #+#    #+#             */
+/*   Updated: 2026/01/31 18:15:32 by miandres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "push_swap.h"
+#include "push_swap.h"
 
-// PARSING
-// int	check_argv(int ac, char **av)
-// {
-// 	int	i;
-// 	int	j;
-// 	char	*s;
-
-// 	j = 0;
-// 	while (av[j])
-// 	{
-// 		j++;
-// 		s = av[j];
-// 		i = 0;
-// 		while (s[i])
-// 		{
-// 			//isnum
-// 			if (s[i] )
-// 			else if //issign
-// 			else 
-// 		}
-// 		av++;
-// 	}
-// 	return (0);
-// }
+void	ft_putendl_fd(char *s, int fd)
+{
+	while (*s)
+	{
+		write(fd, s, 1);
+		s++;
+	}
+	write(fd, "\n", 1);
+}
