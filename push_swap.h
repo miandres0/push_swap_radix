@@ -6,7 +6,7 @@
 /*   By: miandres <miandres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 13:43:33 by miandres          #+#    #+#             */
-/*   Updated: 2026/02/01 09:00:31 by miandres         ###   ########.fr       */
+/*   Updated: 2026/02/01 10:26:42 by miandres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ typedef struct s_num
 }	t_num;
 
 void	rank_list_values(t_num *stack);
-int		check_duplicatese(t_num *stack);
-
+int		check_duplicates(t_num *stack);
+int		check_order(t_num *stack);
 t_num	*parse_args(int argc, char **argv);
 int		parse_argument(char	*str, t_num **stack);
 int		create_node(char *s, t_num **stack);

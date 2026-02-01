@@ -6,7 +6,7 @@
 /*   By: miandres <miandres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 13:01:15 by miandres          #+#    #+#             */
-/*   Updated: 2026/02/01 07:03:14 by miandres         ###   ########.fr       */
+/*   Updated: 2026/02/01 10:25:40 by miandres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,26 @@ int	check_duplicates(t_num *stack)
 		while(j)
 		{
 			if (i->number == j->number)
+				return (0);
+			j = j->next;
+		}
+		i = i->next;
+	}
+	return (1);
+}
+
+int	check_order(t_num *stack)
+{
+	t_num	*i;
+	t_num	*j;
+
+	i = stack;
+	while(i)
+	{
+		j = i->next;
+		while(j)
+		{
+			if (i->number > j->number)
 				return (0);
 			j = j->next;
 		}
@@ -65,9 +85,12 @@ int main(int argc, char **argv)
 	stack_a = parse_args(argc, argv);
 	if (!stack_a || !check_duplicates(stack_a))
 	{
+		free_stack(&stack_a);
 		write(2, "Error\n", 6);
 		return(1);
 	}
+	if (check_order(stack_a))
+		return (0);
 	rank_list_values(stack_a);
 	stack_b = NULL;
 	size = ft_lstsize(stack_a);
