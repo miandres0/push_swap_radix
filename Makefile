@@ -4,12 +4,14 @@ CFLAGS = -Wall -Wextra -Werror -g
 SRCS = main.c \
 		parse_args.c \
 		ft_atol.c \
+		ft_split.c \
 		free.c \
-		moves.c \
 		radix_sort.c \
+		moves_radix.c \
 		alt_sort.c \
-		lst_operations.c \
-		ft_split.c
+		alt_sort_aux.c \
+		moves_alt.c \
+		lst_operations.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
