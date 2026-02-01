@@ -6,16 +6,18 @@
 /*   By: miandres <miandres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 13:39:19 by miandres          #+#    #+#             */
-/*   Updated: 2026/02/01 01:35:12 by miandres         ###   ########.fr       */
+/*   Updated: 2026/02/01 06:48:09 by miandres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    push(t_num **stack_1, t_num **stack_2)
+void	push(t_num **stack_1, t_num **stack_2)
 {
 	t_num	*tmp;
 
+	if (!stack_1 || !(*stack_1))
+		return ;
 	tmp = *stack_1;
 	*stack_1 = tmp->next;
 	tmp->next = *stack_2;
@@ -39,14 +41,14 @@ void	ra(t_num **a)
 	t_num	*old_first;
 	t_num	*old_last;
 	
+	if (!a || !(*a) || !(*a)->next)
+		return ;
 	old_first = *a;
 	*a = old_first->next;
 	old_first->next = NULL;
 	old_last = *a;
 	while (old_last->next)
-	{
 		old_last = old_last->next;
-	}
 	old_last->next = old_first;
 	write(1, "ra\n", 3);
 }

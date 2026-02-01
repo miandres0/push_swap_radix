@@ -6,7 +6,7 @@
 /*   By: miandres <miandres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 13:01:15 by miandres          #+#    #+#             */
-/*   Updated: 2026/02/01 01:28:53 by miandres         ###   ########.fr       */
+/*   Updated: 2026/02/01 07:03:14 by miandres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,9 +72,9 @@ int main(int argc, char **argv)
 	stack_b = NULL;
 	size = ft_lstsize(stack_a);
 	if (size <= 5)
-		alt_sort();
+		alt_sort(&stack_a, &stack_b, size);
 	else
 		radix_sort(&stack_a, &stack_b, size);
-	free_stack(stack_a);
+	free_stack(&stack_a);
 	return (0);
 }

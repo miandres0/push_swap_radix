@@ -6,7 +6,7 @@
 /*   By: miandres <miandres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 23:35:34 by miandres          #+#    #+#             */
-/*   Updated: 2026/02/01 02:33:53 by miandres         ###   ########.fr       */
+/*   Updated: 2026/02/01 06:22:52 by miandres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	case_five(t_num **a, t_num **b)
 	pa(a, b);
 }
 
-void	alt_sort(int size, t_num *a, t_num *b)
+void	alt_sort(t_num **a, t_num **b, int size)
 {
 	if (size == 2)
 		case_two(a);
@@ -58,7 +58,5 @@ void	alt_sort(int size, t_num *a, t_num *b)
 	else if (size == 4)
 		case_four(a, b);
 	else if (size == 5)
-	{
 		case_five(a, b);
-	}
 }

@@ -6,7 +6,7 @@
 /*   By: miandres <miandres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 17:07:20 by miandres          #+#    #+#             */
-/*   Updated: 2026/02/01 01:17:53 by miandres         ###   ########.fr       */
+/*   Updated: 2026/02/01 06:58:33 by miandres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,3 @@ t_num	*parse_args(int argc, char **argv)
 	}
 	return (stack);
 }
-
-
-
-

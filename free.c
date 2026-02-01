@@ -16,6 +16,8 @@ void	free_stack(t_num **stack)
 {
 	t_num	*temp;
 
+	if (!stack)
+		return ;
 	while (*stack)
 	{
 		temp = (*stack)->next;
@@ -28,6 +30,8 @@ void	free_split(char **array)
 {
 	int	i;
 
+	if (!array)
+		return ;
 	i = 0;
 	while (array[i])
 	{
