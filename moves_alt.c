@@ -6,7 +6,7 @@
 /*   By: miandres <miandres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 01:33:58 by miandres          #+#    #+#             */
-/*   Updated: 2026/02/01 10:34:59 by miandres         ###   ########.fr       */
+/*   Updated: 2026/02/01 11:06:16 by miandres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,6 @@ void	sa(t_num **a)
 {
 	swap(a);
 	write(1, "sa\n", 3);
-}
-
-void	sb(t_num **b)
-{
-	swap(b);
-	write(1, "sb\n", 3);
 }
 
 void	rra(t_num **a)

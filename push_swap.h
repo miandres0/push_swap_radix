@@ -6,7 +6,7 @@
 /*   By: miandres <miandres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 13:43:33 by miandres          #+#    #+#             */
-/*   Updated: 2026/02/01 10:39:26 by miandres         ###   ########.fr       */
+/*   Updated: 2026/02/01 11:06:32 by miandres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ void	pb(t_num **a, t_num **b);
 void	ra(t_num **a);
 void	swap(t_num **stack);
 void	sa(t_num **a);
-void	sb(t_num **b);
 void	rra(t_num **a);
 t_num	*ft_lstnew(int content);
 void	lst_add_back(t_num **lst, t_num *new);

@@ -6,7 +6,7 @@
 /*   By: miandres <miandres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 13:01:15 by miandres          #+#    #+#             */
-/*   Updated: 2026/02/01 10:34:46 by miandres         ###   ########.fr       */
+/*   Updated: 2026/02/01 10:51:29 by miandres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,40 +14,40 @@
 
 int	check_duplicates(t_num *stack)
 {
-	t_num	*i;
-	t_num	*j;
+	t_num	*node_1;
+	t_num	*node_2;
 
-	i = stack;
-	while (i)
+	node_1 = stack;
+	while (node_1)
 	{
-		j = i->next;
-		while (j)
+		node_2 = node_1->next;
+		while (node_2)
 		{
-			if (i->number == j->number)
+			if (node_1->number == node_2->number)
 				return (0);
-			j = j->next;
+			node_2 = node_2->next;
 		}
-		i = i->next;
+		node_1 = node_1->next;
 	}
 	return (1);
 }
 
 int	check_order(t_num *stack)
 {
-	t_num	*i;
-	t_num	*j;
+	t_num	*node_1;
+	t_num	*node_2;
 
-	i = stack;
-	while (i)
+	node_1 = stack;
+	while (node_1)
 	{
-		j = i->next;
-		while (j)
+		node_2 = node_1->next;
+		while (node_2)
 		{
-			if (i->number > j->number)
+			if (node_1->number > node_2->number)
 				return (0);
-			j = j->next;
+			node_2 = node_2->next;
 		}
-		i = i->next;
+		node_1 = node_1->next;
 	}
 	return (1);
 }
@@ -55,22 +55,22 @@ int	check_order(t_num *stack)
 void	rank_list_values(t_num *stack)
 {
 	int		rank;
-	t_num	*i;
-	t_num	*j;
+	t_num	*node_1;
+	t_num	*node_2;
 
-	i = stack;
-	while (i)
+	node_1 = stack;
+	while (node_1)
 	{
 		rank = 0;
-		j = stack;
-		while (j)
+		node_2 = stack;
+		while (node_2)
 		{
-			if (j->number < i->number)
+			if (node_2->number < node_1->number)
 				rank++;
-			j = j->next;
+			node_2 = node_2->next;
 		}
-		i->rank = rank;
-		i = i->next;
+		node_1->rank = rank;
+		node_1 = node_1->next;
 	}
 }
 

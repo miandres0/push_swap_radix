@@ -6,7 +6,7 @@
 /*   By: miandres <miandres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 23:35:34 by miandres          #+#    #+#             */
-/*   Updated: 2026/02/01 10:32:58 by miandres         ###   ########.fr       */
+/*   Updated: 2026/02/01 11:04:24 by miandres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,6 @@ void	case_five(t_num **a, t_num **b)
 	move_to_top(a, 1, 4);
 	pb(a, b);
 	case_three(a);
-	if ((*b)->rank < ((*b)->next)->rank)
-		sb(b);
 	pa(a, b);
 	pa(a, b);
 }
