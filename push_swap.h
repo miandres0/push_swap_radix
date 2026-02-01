@@ -6,7 +6,7 @@
 /*   By: miandres <miandres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 13:43:33 by miandres          #+#    #+#             */
-/*   Updated: 2026/02/01 10:26:42 by miandres         ###   ########.fr       */
+/*   Updated: 2026/02/01 10:39:26 by miandres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ int		is_valid_number(char *s);
 int		ft_isdigit(int c);
 long	ft_atol(const char *str);
 char	**ft_split(const char *s, char c);
-
 void	radix_sort(t_num **a, t_num **b, int size);
 int		get_max_bit(int n);
 void	alt_sort(t_num **a, t_num **b, int size);
