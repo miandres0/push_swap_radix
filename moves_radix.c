@@ -6,7 +6,7 @@
 /*   By: miandres <miandres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 13:39:19 by miandres          #+#    #+#             */
-/*   Updated: 2026/02/01 07:40:00 by miandres         ###   ########.fr       */
+/*   Updated: 2026/02/01 10:36:36 by miandres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ra(t_num **a)
 {
 	t_num	*old_first;
 	t_num	*old_last;
-	
+
 	if (!a || !(*a) || !(*a)->next)
 		return ;
 	old_first = *a;

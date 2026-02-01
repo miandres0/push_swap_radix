@@ -6,7 +6,7 @@
 /*   By: miandres <miandres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 13:39:37 by miandres          #+#    #+#             */
-/*   Updated: 2026/01/31 20:24:29 by miandres         ###   ########.fr       */
+/*   Updated: 2026/02/01 10:33:37 by miandres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ t_num	*ft_lstnew(int content)
 	node->next = NULL;
 	return (node);
 }
+
 void	lst_add_back(t_num **lst, t_num *new)
 {
 	t_num	*tmp;

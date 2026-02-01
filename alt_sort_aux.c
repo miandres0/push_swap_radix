@@ -6,7 +6,7 @@
 /*   By: miandres <miandres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 02:07:40 by miandres          #+#    #+#             */
-/*   Updated: 2026/02/01 07:29:04 by miandres         ###   ########.fr       */
+/*   Updated: 2026/02/01 10:33:21 by miandres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	find_position(t_num *stack, int rank)
 	while (stack)
 	{
 		if (stack->rank == rank)
-			return(i);
+			return (i);
 		stack = stack->next;
 		i++;
 	}
@@ -31,7 +31,7 @@ void	move_to_top(t_num **a, int rank, int size)
 {
 	int	position;
 	int	reverse;
-	
+
 	position = find_position(*a, rank);
 	if (position < 0)
 		return ;

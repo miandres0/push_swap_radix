@@ -6,7 +6,7 @@
 /*   By: miandres <miandres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 01:33:58 by miandres          #+#    #+#             */
-/*   Updated: 2026/02/01 07:40:42 by miandres         ###   ########.fr       */
+/*   Updated: 2026/02/01 10:34:59 by miandres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	swap(t_num **stack)
 {
 	t_num	*first;
 	t_num	*second;
-	
+
 	if (!stack || !(*stack) || !(*stack)->next)
 		return ;
 	first = *stack;

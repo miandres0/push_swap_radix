@@ -6,7 +6,7 @@
 /*   By: miandres <miandres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 17:07:20 by miandres          #+#    #+#             */
-/*   Updated: 2026/02/01 06:58:33 by miandres         ###   ########.fr       */
+/*   Updated: 2026/02/01 10:37:38 by miandres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	is_valid_number(char *s)
 	while (s[i])
 	{
 		if (!ft_isdigit(s[i]))
-			return(0);
+			return (0);
 		i++;
 	}
 	return (1);
@@ -53,6 +53,7 @@ int	create_node(char *s, t_num **stack)
 	lst_add_back(stack, node);
 	return (1);
 }
+
 int	parse_argument(char	*str, t_num **stack)
 {
 	char	**temp;
@@ -77,6 +78,7 @@ int	parse_argument(char	*str, t_num **stack)
 	free_split(temp);
 	return (1);
 }
+
 t_num	*parse_args(int argc, char **argv)
 {
 	int		i;
@@ -84,7 +86,7 @@ t_num	*parse_args(int argc, char **argv)
 
 	stack = NULL;
 	i = 1;
-	while(i < argc)
+	while (i < argc)
 	{
 		if (!parse_argument(argv[i], &stack))
 		{
