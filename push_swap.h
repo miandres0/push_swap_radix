@@ -6,7 +6,7 @@
 /*   By: miandres <miandres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 13:43:33 by miandres          #+#    #+#             */
-/*   Updated: 2026/01/31 20:41:25 by miandres         ###   ########.fr       */
+/*   Updated: 2026/02/01 02:23:26 by miandres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	rank_list_values(t_num *stack);
 int		check_duplicatese(t_num *stack);
 
 t_num	*parse_args(int argc, char **argv);
+int	parse_argument(char	*str, t_num **stack);
 int		create_node(char *s, t_num **stack);
 int		is_valid_number(char *s);
 int		ft_isdigit(int c);
@@ -48,5 +49,10 @@ int		ft_lstsize(t_num *lst);
 // void	ft_putendl_fd(char *s, int fd);
 void	free_stack(t_num **stack);
 void	free_split(char **array);
+
+int		find_position(t_num *stack, int rank);
+void	move_to_top(t_num **stack, int rank, int size);
+
+// ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker_OS $ARG
 
 #endif

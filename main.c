@@ -6,7 +6,7 @@
 /*   By: miandres <miandres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 13:01:15 by miandres          #+#    #+#             */
-/*   Updated: 2026/01/31 21:22:59 by miandres         ###   ########.fr       */
+/*   Updated: 2026/02/01 01:28:53 by miandres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,22 +53,6 @@ void	rank_list_values(t_num *stack)
 		i = i->next;
 	}
 }
-/* t_num	*create_stack_a(int *array, int size)
-{
-	int		i;
-	int		rank;
-	t_num	*lst;
-
-	lst = NULL;
-	i = 0;
-	while (i < size)
-	{
-		rank = find_rank(array, size, i);
-		lst_add_back(&lst, ft_lstnew(rank));
-		i++;
-	}
-	return(lst);
-} */
 
 int main(int argc, char **argv)
 {
@@ -87,6 +71,10 @@ int main(int argc, char **argv)
 	rank_list_values(stack_a);
 	stack_b = NULL;
 	size = ft_lstsize(stack_a);
-	radix_sort(&stack_a, &stack_b, size);
+	if (size <= 5)
+		alt_sort();
+	else
+		radix_sort(&stack_a, &stack_b, size);
+	free_stack(stack_a);
 	return (0);
 }
