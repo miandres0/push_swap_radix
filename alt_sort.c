@@ -6,7 +6,7 @@
 /*   By: miandres <miandres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 23:35:34 by miandres          #+#    #+#             */
-/*   Updated: 2026/02/01 06:22:52 by miandres         ###   ########.fr       */
+/*   Updated: 2026/02/01 09:01:57 by miandres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,20 @@ void	case_two(t_num **a)
 
 void	case_three(t_num **a)
 {
-	if ((*a)-> rank == 2)
+	int		max_rank;
+	t_num	*tmp;
+	
+	max_rank = 2;
+	tmp = *a;
+	while (tmp)
+	{
+		if (tmp->rank > max_rank)
+			max_rank = tmp->rank;
+		tmp = tmp->next;
+	}
+	if ((*a)-> rank == max_rank)
 		ra(a);
-	else if (((*a)->next)->rank == 2)
+	else if (((*a)->next)->rank == max_rank)
 		rra(a);
 	if ((*a)->rank > ((*a)->next)->rank)
 		sa(a);

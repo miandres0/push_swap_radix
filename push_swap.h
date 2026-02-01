@@ -6,7 +6,7 @@
 /*   By: miandres <miandres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 13:43:33 by miandres          #+#    #+#             */
-/*   Updated: 2026/02/01 07:41:56 by miandres         ###   ########.fr       */
+/*   Updated: 2026/02/01 09:00:31 by miandres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,5 @@ void	lst_add_back(t_num **lst, t_num *new);
 int		ft_lstsize(t_num *lst);
 void	free_stack(t_num **stack);
 void	free_split(char **array);
-
-// ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker_OS $ARG
 
 #endif
